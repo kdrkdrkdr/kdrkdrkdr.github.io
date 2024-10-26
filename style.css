@@ -134,6 +134,10 @@ address {
   border-radius: 4px;
 }
 
+p span {
+  font-weight: bold;
+}
+
 @media (max-width: 768px) {
   .header-table td {
       display: block;
