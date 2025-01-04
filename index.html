@@ -28,20 +28,33 @@
                 <h2>연락처</h2>
                 <address>
                     <ul>
-                        <li>EMail: <a href="mailto:kdrhacker1234@gmail.com">kdrhacker1234@gmail.com</a></li>
                         <li>Phone: (+82) 10-3323-0349</li>
+                        <li>Email: <a href="mailto:kdrhacker1234@gmail.com">kdrhacker1234@gmail.com</a></li>
+                        <li>Github: <a href="https://github.com/kdrkdrkdr">https://github.com/kdrkdrkdr</a></li>
+                        <li>Huggingface: <a href="https://huggingface.co/kdrkdrkdr">https://huggingface.co/kdrkdrkdr</a></li>
                     </ul>
                 </address>
             </td>
         </tr>
     </table>
-    <br>
-    <br>
-    <br>
+
+
+    <h1>Tech/Library Stack (기술/라이브러리 스택)</h1>
+    <div class="tech-stack">
+        <div class="tech-item">Python</div>
+        <div class="tech-item">Web Crawling</div>
+        <div class="tech-item">PyTorch</div>
+        <div class="tech-item">PySide(QT/GUI)</div>
+        <div class="tech-item">Selenium</div>
+        <div class="tech-item">Pandas</div>
+        <div class="tech-item">Numpy</div>
+        <div class="tech-item">TTS/VC</div>
+        <div class="tech-item">LLM</div>
+        <div class="tech-item">Quantization</div>
+    </div>
+
 
     <h1>C.V. (경력기술서)</h1>
-    
-
     <div class="job-section">
         <h2>엔씨소프트 (KR) 2024년 7월 ~ 2025년 1월</h2>
         <h3>소속: AI데이터실 오디오데이터팀 (계약직)</h3>
@@ -92,8 +105,8 @@
             <li class="keywords">키워드: Text-to-Speech, Data Processing Automation, PyTorch, GUI, Numpy</li>
         </ul>
     </div>
-    <br>
     
+
     <div class="job-section">
         <h2>Axcellworks (JP) 2023년 11월 ~ 2024년 2월</h2>
         <h3>소속: X (프리랜서/재택)</h3>
@@ -103,7 +116,7 @@
                 <ul>
                     <li>
                         <strong>Problem:</strong>
-                        실시간 음성 변환 프로그램 (Voice Converter)에서 지연 시간과 각 청크를 처리함에 있어 목소리가 끊기고, 변환된 목소리의 언어 인식률이 많이 떨어져있는 상태였습니다.
+                        실시간 음성 변환 프로그램 (Voice Converter)에서 지연 시간과 각 청크를 처리함에 있어 목소리가 끊기고, 변환된 목소리의 언어 인식률이 많이 떨어지는 것이 문제였습니다.
                     </li>
                     <li>
                         <strong>Process:</strong>
@@ -135,20 +148,6 @@
         </ul>
     </div>
 
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-
     <div class="job-section">
         <h2>Taiyaki Studios Ltd. (US) 2023년 1월 ~ 7월</h2>
         <h3>소속: Artificial Intelligence (계약직/재택)</h3>
@@ -168,8 +167,7 @@
                             <li>데이터셋 구축: 길이가 긴 음성 파일을 Text-to-Speech(TTS) 학습에 적합하게 짧게 잘라내고, 해당 음성 파일에 대응하는 대사 파일을 자동으로 생성하는 유틸리티를 개발했습니다. 특히, 희귀하거나 구하기 어려운 데이터셋의 경우, 음성 변환 및 증강 기법을 활용하여 데이터셋 부족 문제에 대응했습니다. 이 과정에서 부적절한 데이터셋(예: 중간에 끊기거나 말단 부분이 잘린 음성 파일 등)의 관리에도 주의를 기울였습니다.</li>
                             <li>모델 학습: TTS 모델과 텍스트를 음소 단위로 변환하는 Grapheme To Phoneme (G2P) 코드 개발을 진행했습니다. 기본 데이터셋을 사용한 사전 학습 모델을 개발하고, 이를 바탕으로 적은 양의 데이터셋으로도 미세 조정을 통해 우수한 성능의 TTS 모델을 개발했습니다. 또한, 모델의 저장 공간 효율성을 높이기 위해 모델 압축 방법도 적용했습니다.</li>
                             <li>성능 테스트: 모델의 추론 속도는 Real-Time Factor(RTF) 측정을 통해 평가했습니다. 또한, 발음의 정확성과 음소 부족으로 인한 부정확한 발음이나 텍스트 문제를 Mean Opinion Score (MOS)를 사용하여 정밀하게 측정함으로써, Ground Truth(GT)와 합성된 음성 사이의 차이를 계산하여 모델의 성능을 검증했습니다. 하이퍼파라미터 조정을 통해 모델의 레이어 수를 최적화하고 경량화하여 기존 모델 대비 빠른 추론 속도를 달성할 수 있었습니다.</li>
-                            <li>파이프라인 구축: 마지막 단계에서는 학습을 마친 TTS 모델을 실제 서비스에 통합할 수 있도록, 모델을 배포하기 위한 추론 코드 작성했습니다. 이를 통해 개발한 TTS 모델은 실제 서비스 환경에서 사용자의 요구에 신속하고 효율적으로 대응할 수 있도록 하였습니다.
-                            </li>
+                            <li>파이프라인 구축: 마지막 단계에서는 학습을 마친 TTS 모델을 실제 서비스에 통합할 수 있도록, 모델을 배포하기 위한 추론 코드 작성했습니다. 이를 통해 개발한 TTS 모델은 실제 서비스 환경에서 사용자의 요구에 신속하고 효율적으로 대응할 수 있도록 하였습니다.</li>
                         </ul>
                     </li>
 
@@ -189,6 +187,7 @@
         </ul>
     </div>
 
+    
     <div class="job-section">
         <h2>Team KS (KR) 2018년 1월 ~ 2019년 4월</h2>
         <h3>소속: 개발팀 (외주/재택)</h3>
@@ -219,12 +218,7 @@
             <li class="keywords">키워드: Python, Selenium, CSV, Pandas</li>
         </ul>
     </div>
-
-    <br>
-    <br>
-    <br>
-    <br>
-    
+    <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
     <h1>Extracurricular Activities (대외활동)</h1>
     <div class="extracurricular-item">
         <h2>팀 엘니뇨 창업 활동 (KR) 2024년 4월 ~ </h2>
