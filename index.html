@@ -6,7 +6,6 @@
     <link rel="stylesheet" type="text/css" href="style.css">
 </head>
 <body>
-<body>
 <div class="container">
     <h1>Gyeongmin Kim (김경민) 경력기술서</h1>
     <table class="header-table">
@@ -38,265 +37,146 @@
         </tr>
     </table>
 
-
     <h1>Tech/Library Stack (기술/라이브러리 스택)</h1>
     <div class="tech-stack">
         <div class="tech-item">Python</div>
-        <div class="tech-item">Web Crawling</div>
         <div class="tech-item">PyTorch</div>
-        <div class="tech-item">PySide(QT/GUI)</div>
-        <div class="tech-item">Selenium</div>
-        <div class="tech-item">Pandas</div>
-        <div class="tech-item">Numpy</div>
         <div class="tech-item">TTS/VC</div>
         <div class="tech-item">LLM</div>
+        <div class="tech-item">Deep Learning</div>
+        <div class="tech-item">Few-shot Learning</div>
+        <div class="tech-item">Voice Activity Detection</div>
+        <div class="tech-item">Machine Translation</div>
+        <div class="tech-item">NLP</div>
+        <div class="tech-item">Audio Processing</div>
+        <div class="tech-item">Real-time Processing</div>
+        <div class="tech-item">Web Crawling</div>
+        <div class="tech-item">Selenium</div>
+        <div class="tech-item">FastAPI</div>
+        <div class="tech-item">Flask</div>
+        <div class="tech-item">JavaScript</div>
+        <div class="tech-item">PySide(QT/GUI)</div>
+        <div class="tech-item">Android</div>
+        <div class="tech-item">Java</div>
+        <div class="tech-item">SQLite</div>
+        <div class="tech-item">Pandas</div>
+        <div class="tech-item">Numpy</div>
+        <div class="tech-item">OCR</div>
+        <div class="tech-item">API Development</div>
         <div class="tech-item">Quantization</div>
     </div>
 
-
     <h1>C.V. (경력기술서)</h1>
-    <div class="job-section">
-        <h2>연세대학교의료원 산학협력단 (KR) 2025년 3월 ~</h2>
-        <h3>소속: 연세대학교 의생명시스템정보학교실 유승찬 교수님 연구실 (인턴/연구원)</h3>
-        <ul>
-            <!-- <li>
-                <strong>[사내용 TTS 학습 도구 개발]</strong> <br>
-                <ul>
-                    <li>
-                        <strong>Problem:</strong>
-                        사내 사람들의 목소리로 TTS를 개발하여 적용하려고 했으나, 음성 데이터의 양이 적어 제대로 된 결과물을 기대할 수 없었고 파이프라인 구축된 것도 없었습니다.
-                    </li>
-
-                    <li>
-                        <strong>Solution:</strong>
-                        다음 과정을 거치며 문제점을 해결하였습니다.
-                        <ul>
-                            <li>데이터셋 구축: 길이가 긴 음성 파일을 Text-to-Speech(TTS) 학습에 적합하게 짧게 잘라내고, 해당 음성 파일에 대응하는 대사 파일을 자동으로 생성하는 유틸리티를 개발했습니다. 특히, 희귀하거나 구하기 어려운 데이터셋의 경우, 음성 변환 및 증강 기법을 활용하여 데이터셋 부족 문제에 대응했습니다. 이 과정에서 부적절한 데이터셋(예: 중간에 끊기거나 말단 부분이 잘린 음성 파일 등)의 관리에도 주의를 기울였습니다.</li>
-                            <li>모델 학습: TTS 모델과 텍스트를 음소 단위로 변환하는 Grapheme To Phoneme (G2P) 코드 개발을 진행했습니다. 기본 데이터셋을 사용한 사전 학습 모델을 개발하고, 이를 바탕으로 적은 양의 데이터셋으로도 미세 조정을 통해 우수한 성능의 TTS 모델을 개발했습니다. 또한, 모델의 저장 공간 효율성을 높이기 위해 모델 압축 방법도 적용했습니다.</li>
-                            <li>성능 테스트: 모델의 추론 속도는 Real-Time Factor(RTF) 측정을 통해 평가했습니다. 또한, 발음의 정확성과 음소 부족으로 인한 부정확한 발음이나 텍스트 문제를 Mean Opinion Score (MOS)를 사용하여 정밀하게 측정함으로써, Ground Truth(GT)와 합성된 음성 사이의 차이를 계산하여 모델의 성능을 검증했습니다. 하이퍼파라미터 조정을 통해 모델의 레이어 수를 최적화하고 경량화하여 기존 모델 대비 빠른 추론 속도를 달성할 수 있었습니다.</li>
-                            <li>파이프라인 구축: 마지막 단계에서는 학습을 마친 TTS 모델을 실제 서비스에 통합할 수 있도록, 모델을 배포하기 위한 추론 코드 작성했습니다. 이를 통해 개발한 TTS 모델은 실제 서비스 환경에서 사용자의 요구에 신속하고 효율적으로 대응할 수 있도록 하였습니다.</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>Achievement:</strong>
-                        <ul>
-                            <li>사내에서 바로 사용 가능하도록 TTS와 그 파이프라인 도구를 제공할 수 있었습니다.</li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li>프로젝트 인원: 2명</li>
-            <li>역할: 개발자, QA</li>
-            <li class="keywords">키워드: Python, Text-to-Speech, Few-shot, Voice-Conversion, Deep-Learning</li> -->
-        </ul>
-    </div>
-
-    <div class="job-section">
-        <h2>엔씨소프트 (KR) 2024년 7월 ~ 2025년 1월</h2>
-        <h3>소속: AI데이터실 오디오데이터팀 (계약직)</h3>
-        <ul>
-            <li>
-                <strong>[AUDT_자동화 프로젝트 - 오디오 후처리 자동화 프로그램 개발]</strong> <br>
-                <ul>
-                    <li>
-                        <strong>Problem:</strong>
-                        기존에 출시되어 있는 상업용 오디오 처리 프로그램의 경우, 녹음된 기존 오디오 파형을 손상(압축, Fade In/Out)시키며 처리합니다. 
-                        기업 단위의 오디오 데이터 처리는 매우 높은 품질을 유지하며 처리해야 하는 팀의 목적과 달라, 팀원들이 각각 수동으로 데이터를 처리합니다. 
-                        이는 시간이 굉장히 많이 걸리는 작업이었습니다.
-                    </li>
-
-                    <li>
-                        <strong>Process:</strong>
-                        <ul>
-                            <li>1. 팀 회의 시 팀원들의 불편하다고 생각했던 내용 수집</li>
-                            <li>2. 해당 내용을 해결하기 위한 자동화 기능 구현</li>
-                            <li>3. 불편했던 내용을 제공했던 팀원들과 함께 기능 QA 진행</li>
-                            <li>4. 팀 전체 공지 후 자동화 프로그램 배포 및 사용</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>Solution:</strong>
-                        다음 내용을 프로그램에 적용하여 오디오 후처리 시스템을 자동화하였습니다.
-                        <ul>
-                            <li>녹음실 미세소음 제거: 녹음된 성우의 음성 파일에서 녹음실의 미세한 잡음을 남김없이 제거하고 깔끔한 목소리로 만들었습니다.</li>
-                            <li>숨소리 제거: 숨소리에선 F0가 검출되지 않는 점과 여러 보정값을 이용하여 음성에서 숨소리를 제거하였습니다.</li>
-                            <li>Endpoint Detection: TTS학습을 위해 맨 앞과 뒷 부분을 감지하여 공백을 일정하게 삽입하였습니다.</li>
-                            <li>텍스트 태깅: 대만어 데이터의 경우 업체에서 받는 데이터에 간체자가 섞여있어 이를 태깅하여 대사 수정을 빠르게 할 수 있도록 하였습니다.</li>
-                            <li>문장 부호 공백 삽입: 오디오와 텍스트를 강제 정렬하여 각 문장 부호에 대한 공백 시간에 맞춰 공백을 삽입하였습니다.</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>Achievement:</strong>
-                        <ul>
-                            <li>팀원들의 기존 작업 시간 대비 약 30% 단축되었습니다.</li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-            <li>프로젝트 인원: 5명</li>
-            <li>역할: 개발, QA</li>
-            <li class="keywords">키워드: Text-to-Speech, Data Processing Automation, PyTorch, GUI, Numpy</li>
-        </ul>
+    <div id="career-content">
+        <!-- 경력 내용이 여기에 동적으로 로드됩니다 -->
     </div>
     
+    <script>
+        // 경력 파일들을 순서대로 로드
+        const careerFiles = [
+            'parts/career/yuhs.html',
+            'parts/career/ncsoft.html', 
+            'parts/career/axcellworks.html',
+            'parts/career/taiyaki.html',
+            'parts/career/teamks.html'
+        ];
+        
+        // 대외활동 파일들을 순서대로 로드
+        const extracurricularFiles = [
+            'parts/extracurricular/elnino.html'
+        ];
+        
+        // 포트폴리오 파일들을 순서대로 로드
+        const portfolioFiles = [
+            'parts/portfolio/speech.html',
+            'parts/portfolio/translation.html',
+            'parts/portfolio/api.html',
+            'parts/portfolio/automation.html',
+            'parts/portfolio/contribution.html'
+        ];
+        
+        async function loadCareerContent() {
+            const careerContainer = document.getElementById('career-content');
+            
+            for (const file of careerFiles) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const content = await response.text();
+                        careerContainer.innerHTML += content;
+                    } else {
+                        console.warn(`파일을 로드할 수 없습니다: ${file}`);
+                    }
+                } catch (error) {
+                    console.error(`파일 로드 오류: ${file}`, error);
+                }
+            }
+        }
+        
+        async function loadExtracurricularContent() {
+            const extracurricularContainer = document.getElementById('extracurricular-content');
+            
+            for (const file of extracurricularFiles) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const content = await response.text();
+                        extracurricularContainer.innerHTML += content;
+                    } else {
+                        console.warn(`파일을 로드할 수 없습니다: ${file}`);
+                    }
+                } catch (error) {
+                    console.error(`파일 로드 오류: ${file}`, error);
+                }
+            }
+        }
+        
+        async function loadPortfolioContent() {
+            const portfolioContainer = document.getElementById('portfolio-content');
+            
+            for (const file of portfolioFiles) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const content = await response.text();
+                        portfolioContainer.innerHTML += content;
+                    } else {
+                        console.warn(`파일을 로드할 수 없습니다: ${file}`);
+                    }
+                } catch (error) {
+                    console.error(`파일 로드 오류: ${file}`, error);
+                }
+            }
+        }
+        
+        // 페이지 로드되면 모든 내용 로드
+        document.addEventListener('DOMContentLoaded', function() {
+            loadCareerContent();
+            loadExtracurricularContent();
+            loadPortfolioContent();
+        });
+    </script>
 
-    <div class="job-section">
-        <h2>Axcellworks (JP) 2023년 11월 ~ 2024년 2월</h2>
-        <h3>소속: X (프리랜서/재택)</h3>
-        <ul>
-            <li>
-                <strong>[Voice Changer 언어인식률 개선]</strong>
-                <ul>
-                    <li>
-                        <strong>Problem:</strong>
-                        실시간 음성 변환 프로그램 (Voice Converter)에서 지연 시간과 각 청크를 처리함에 있어 목소리가 끊기고, 변환된 목소리의 언어 인식률이 많이 떨어지는 것이 문제였습니다.
-                    </li>
-                    <li>
-                        <strong>Process:</strong>
-                        <ul>
-                            <li>1. 언어 인식률을 개선하는 방법에 대한 가설을 세워 함께 공유</li>
-                            <li>2. 가설을 토대로 프로토타입 구현</li>
-                            <li>3. 사람이 판단하는 인식률과 STT의 인식률로 언어 인식률 측정</li>
-                            <li>4. 언어 인식률이 많이 개선되었을 때 최종으로 코드 배포</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Solution:</strong>
-                        다음 과정을 통해 언어 인식률 저하 문제를 개선하였습니다.
-                        <ul>
-                            <li>청크 병합: 기존에 1, 2, 3, 4, 5, ... 들어오는 청크를 (1, 2, 3), (2, 3, 4), (3, 4, 5) 로 묶어서 가운데 청크만을 이용하여 변환 및 발화 인식률을 높였습니다.</li>
-                        </ul>
-                    </li>
-                    <li>
-                        <strong>Achievement:</strong>
-                        <ul>
-                            <li>실시간 Voice Conversion 시 발생하는 음성 언어 인식률 저하 문제를 이전 코드의 딜레이가 거의 없는 상태로 개선시켰습니다.</li>
-                        </ul>
-                    </li>
-                    <li>프로젝트 인원: 1명</li>
-                    <li>역할: 개발, QA</li>
-                    <li class="keywords">키워드: Realtime-Voice-Conversion, Python</li>
-                </ul>
-            </li>
-        </ul>
-    </div>
-
-    <div class="job-section">
-        <h2>Taiyaki Studios Ltd. (US) 2023년 1월 ~ 7월</h2>
-        <h3>소속: Artificial Intelligence (계약직/재택)</h3>
-        <ul>
-            <li>
-                <strong>[사내용 TTS 학습 도구 개발]</strong> <br>
-                <ul>
-                    <li>
-                        <strong>Problem:</strong>
-                        사내 사람들의 목소리로 TTS를 개발하여 적용하려고 했으나, 음성 데이터의 양이 적어 제대로 된 결과물을 기대할 수 없었고 파이프라인 구축된 것도 없었습니다.
-                    </li>
-
-                    <li>
-                        <strong>Solution:</strong>
-                        다음 과정을 거치며 문제점을 해결하였습니다.
-                        <ul>
-                            <li>데이터셋 구축: 길이가 긴 음성 파일을 Text-to-Speech(TTS) 학습에 적합하게 짧게 잘라내고, 해당 음성 파일에 대응하는 대사 파일을 자동으로 생성하는 유틸리티를 개발했습니다. 특히, 희귀하거나 구하기 어려운 데이터셋의 경우, 음성 변환 및 증강 기법을 활용하여 데이터셋 부족 문제에 대응했습니다. 이 과정에서 부적절한 데이터셋(예: 중간에 끊기거나 말단 부분이 잘린 음성 파일 등)의 관리에도 주의를 기울였습니다.</li>
-                            <li>모델 학습: TTS 모델과 텍스트를 음소 단위로 변환하는 Grapheme To Phoneme (G2P) 코드 개발을 진행했습니다. 기본 데이터셋을 사용한 사전 학습 모델을 개발하고, 이를 바탕으로 적은 양의 데이터셋으로도 미세 조정을 통해 우수한 성능의 TTS 모델을 개발했습니다. 또한, 모델의 저장 공간 효율성을 높이기 위해 모델 압축 방법도 적용했습니다.</li>
-                            <li>성능 테스트: 모델의 추론 속도는 Real-Time Factor(RTF) 측정을 통해 평가했습니다. 또한, 발음의 정확성과 음소 부족으로 인한 부정확한 발음이나 텍스트 문제를 Mean Opinion Score (MOS)를 사용하여 정밀하게 측정함으로써, Ground Truth(GT)와 합성된 음성 사이의 차이를 계산하여 모델의 성능을 검증했습니다. 하이퍼파라미터 조정을 통해 모델의 레이어 수를 최적화하고 경량화하여 기존 모델 대비 빠른 추론 속도를 달성할 수 있었습니다.</li>
-                            <li>파이프라인 구축: 마지막 단계에서는 학습을 마친 TTS 모델을 실제 서비스에 통합할 수 있도록, 모델을 배포하기 위한 추론 코드 작성했습니다. 이를 통해 개발한 TTS 모델은 실제 서비스 환경에서 사용자의 요구에 신속하고 효율적으로 대응할 수 있도록 하였습니다.</li>
-                        </ul>
-                    </li>
-
-                    <li>
-                        <strong>Achievement:</strong>
-                        <ul>
-                            <li>사내에서 바로 사용 가능하도록 TTS와 그 파이프라인 도구를 제공할 수 있었습니다.</li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-
-            <li>프로젝트 인원: 2명</li>
-            <li>역할: 개발자, QA</li>
-            <li class="keywords">키워드: Python, Text-to-Speech, Few-shot, Voice-Conversion, Deep-Learning</li>
-        </ul>
-    </div>
-
-    
-    <div class="job-section">
-        <h2>Team KS (KR) 2018년 1월 ~ 2019년 4월</h2>
-        <h3>소속: 개발팀 (외주/재택)</h3>
-        <ul>
-            <li>
-                <strong>[네이버 서비스 광고 프로그램 개발]</strong> <br>
-                <ul>
-                    <li>
-                        <strong>Problem:</strong>
-                        광고 댓글을 직접 달고, 알바를 구하고 하는 과정을 그만두고 싶어하는 고객들이 있었습니다.
-                    </li>
-
-                    <li>
-                        <strong>Solution:</strong>
-                        웹 프로세스 자동화 및 크롤링, 프록시, UI Automation을 이용하여 프로그램을 개발하여 납품하였습니다.
-                        <ul>
-                            <li>네이버 메일/쪽지: 자동 메일/쪽지 발송</li>
-                            <li>네이버 블로그: 서로이웃 자동 신청</li>
-                            <li>네이버 카페: 자동 글 쓰기</li>
-                            <li>네이버 쇼핑 라이브: 자동 댓글</li>
-                        </ul>
-                    </li>
-
-                </ul>
-            </li>
-            <li>프로젝트 인원: 2명</li>
-            <li>역할: 개발자, QA</li>
-            <li class="keywords">키워드: Python, Selenium, CSV, Pandas</li>
-        </ul>
-    </div>
-    <br>
     <h1>Extracurricular Activities (대외활동)</h1>
-    <div class="extracurricular-item">
-        <h2>팀 엘니뇨 창업 활동 (KR) 2024년 4월 ~ </h2>
-        <h3>소속: 개발팀/대표</h3>
-        <p>한양대학교 창업동아리 팀 엘니뇨🌊 (사업자 등록 완)에서 대표 및 '더 리얼한 실시간 통역 서비스'를 위한 다국어 Speaker Embedding TTS와 LLM 프롬프팅 기반 번역 API를 개발하고 있습니다.</p>
-        <ul>
-            <li>프로젝트 인원: 2명</li>
-            <li>역할: 개발, QA, 서류 작성</li>
-            <li>
-                관련 활동:
-                <ul>
-                    <li><strong>대한영상의학기술학회 실시간 번역 자막 서비스 제공 (2025.03)</strong></li>
-                    <li><strong>교육부 U300+ 학생 창업 유망팀 성장트랙 최종 선발 (2024.08)</strong></li>
-                    <li>한양대학교 청년 창업아이템 챌린지 경진대회 본선 발표 (2024.06)</li>
-                    <li>한양대학교 창업동아리 경진대회 본선 발표 (2024.06)</li>
-                    <li>Naver D2SF 서류합격 (2024.05)</li>
-                    <li>한양대학교 창업동아리 엘니뇨 대표 (2024.04)</li>
-                </ul>
-            </li>
-            <li class="keywords">키워드: Text-to-Speech, Speaker-Embedding, Voice-Conversion, Emotion-Transfer, Quantization</li>
-        </ul>
+    <div id="extracurricular-content">
+        <!-- 대외활동 내용이 여기에 동적으로 로드됩니다 -->
     </div>
-
 
     <h1>License (자격증)</h1>
-    <div class="license-item">
-        <h4>운전면허 2종 (2023.07.31)</h4>
-        <h4>ITQ A등급 (2016.12.15)</h4>
-    </div>
-
+    <ul>
+        <li class="license-item">운전면허 2종 (2023.07.31)</li>
+        <li class="license-item">ITQ A등급 (2016.12.15)</li>
+    </ul>
 
     <h1>Personal Project (개발 포트폴리오)</h1>
-    <ul>
-        <li><a href="https://kdrkdrkdr.github.io/oss.html">개발 포트폴리오</a></li>
-    </ul>
+    <div id="portfolio-content">
+        <!-- 개발 포트폴리오 내용이 여기에 동적으로 로드됩니다 -->
+    </div>
 
     <h1>Education (교육)</h1>
     <ul>
         <li><a href="http://cs.hanyang.ac.kr/">한양대학교 공과대학 컴퓨터소프트웨어학부</a> (재학: 2023.03 ~ 2024.06, 휴학: 2024.07 ~)</li>
     </ul>
-
-    
+</div>
+</body>
+</html>
