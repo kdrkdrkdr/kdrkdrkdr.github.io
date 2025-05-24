@@ -96,10 +96,15 @@ h1 {
   color: var(--primary-color);
   font-size: 2rem;
   font-weight: 700;
-  margin: 15px 0 15px 0;
+  margin: 35px 0 15px 0;
   position: relative;
   padding-bottom: 10px;
   border-bottom: 2px solid var(--primary-color);
+}
+
+/* First h1 has less top margin */
+h1:first-of-type {
+  margin-top: 15px;
 }
 
 h2 {
@@ -161,7 +166,7 @@ li:hover {
 /* Links */
 a {
   color: var(--primary-color);
-  text-decoration: none;
+  text-decoration: underline;
   font-weight: 500;
   transition: var(--transition);
 }
@@ -233,7 +238,7 @@ a:hover {
   background: transparent;
   border: none;
   border-radius: 0;
-  padding: 5px 0 15px 0;
+  padding: 6px 0 10px 0;
   margin-bottom: 15px;
   transition: var(--transition);
   border-bottom: 1px solid var(--border-color);
@@ -243,7 +248,7 @@ a:hover {
   border-bottom: none;
 }
 
-.portfolio-item h3 {
+.portfolio-item h4 {
   color: var(--primary-color);
   font-size: 1.1rem;
   font-weight: 600;
@@ -252,12 +257,34 @@ a:hover {
 
 .portfolio-item p {
   color: var(--text-secondary);
-  margin: 5px 0 8px 0;
+  margin: 0 0 8px 0;
   line-height: 1.5;
 }
 
-.portfolio-item:hover h3 {
+.portfolio-item p:last-of-type {
+  margin-bottom: 10px;
+}
+
+.portfolio-item:hover h4 {
   color: var(--secondary-color);
+}
+
+/* Portfolio Categories */
+.portfolio-category {
+  margin-bottom: 30px;
+}
+
+.portfolio-category:last-child {
+  margin-bottom: 0;
+}
+
+.portfolio-category h3 {
+  color: var(--text-primary);
+  font-size: 1.4rem;
+  font-weight: 600;
+  margin: 0 0 20px 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid var(--border-color);
 }
 
 /* License Items - Simple List Style */
@@ -289,6 +316,7 @@ a:hover {
   font-size: 0.8rem;
   font-style: italic;
   margin-top: 10px;
+  margin-bottom: 0;
   padding: 6px 10px;
   background: var(--bg-light);
   border-radius: 4px;
@@ -300,6 +328,16 @@ li.keywords:before {
 
 li.keywords {
   padding-left: 0;
+  margin-bottom: 0;
+}
+
+/* Keywords in portfolio items need special handling */
+.portfolio-item .keywords {
+  margin-bottom: 0;
+}
+
+.portfolio-item ul {
+  margin-bottom: 0;
 }
 
 /* Address styling */
@@ -380,8 +418,20 @@ address {
   .portfolio-item {
     border-bottom: 1px solid #ccc !important;
     margin-bottom: 10px;
-    padding: 3px 0 8px 0;
+    padding: 8px 0 8px 0;
     page-break-inside: avoid;
+  }
+  
+  .portfolio-category {
+    margin-bottom: 20px;
+    page-break-inside: avoid;
+  }
+  
+  .portfolio-category h3 {
+    border-bottom: 1px solid #ccc !important;
+    margin: 0 0 15px 0;
+    padding-bottom: 5px;
+    page-break-after: avoid;
   }
   
   .tech-item {
