@@ -38,6 +38,21 @@
                     console.error(`파일 로드 오류: ${file}`, error);
                 }
             }
+            
+            // 아코디언 기능 추가
+            initializeAccordion();
+        }
+        
+        function initializeAccordion() {
+            const categoryHeaders = document.querySelectorAll('.portfolio-category h3');
+            
+            categoryHeaders.forEach(header => {
+                header.addEventListener('click', function() {
+                    this.classList.toggle('collapsed');
+                    const content = this.nextElementSibling;
+                    content.classList.toggle('collapsed');
+                });
+            });
         }
         
         // 페이지 로드되면 모든 내용 로드

@@ -283,8 +283,42 @@ a:hover {
   font-size: 1.4rem;
   font-weight: 600;
   margin: 0 0 20px 0;
-  padding-bottom: 8px;
+  padding: 12px 15px;
   border-bottom: 1px solid var(--border-color);
+  cursor: pointer;
+  background: var(--bg-light);
+  border-radius: var(--border-radius);
+  transition: var(--transition);
+  user-select: none;
+  position: relative;
+}
+
+.portfolio-category h3:hover {
+  background: #e5e7eb;
+}
+
+.portfolio-category h3::after {
+  content: "▼";
+  position: absolute;
+  right: 15px;
+  font-size: 0.9rem;
+  transition: transform 0.3s ease;
+}
+
+.portfolio-category h3.collapsed::after {
+  transform: rotate(-90deg);
+}
+
+.portfolio-category-content {
+  max-height: 5000px;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  opacity: 1;
+}
+
+.portfolio-category-content.collapsed {
+  max-height: 0;
+  opacity: 0;
 }
 
 /* License Items - Simple List Style */
