@@ -20,18 +20,18 @@
 /* Section Headers for better separation */
 section h2 {
   background: var(--bg-light);
-  padding: 10px 15px;
-  margin: 25px 0 15px 0;
+  padding: 8px 12px;
+  margin: 15px 0 10px 0;
   border-radius: var(--border-radius);
   border-left: 4px solid var(--primary-color);
-  font-size: 1.3rem;
+  font-size: 1.2rem;
   font-weight: 600;
   color: var(--text-primary);
 }
 
 /* First section header - less top margin */
 section:first-of-type h2 {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 /* Base Styles */
@@ -43,11 +43,11 @@ section:first-of-type h2 {
 
 body {
   font-family: 'Inter', 'Noto Sans KR', sans-serif;
-  line-height: 1.6;
+  line-height: 1.45;
   color: var(--text-primary);
   background: white;
-  padding: 10px;
-  font-size: 14px;
+  padding: 8px;
+  font-size: 13.5px;
 }
 
 /* Container */
@@ -55,7 +55,7 @@ body {
   max-width: 1000px;
   margin: 0 auto;
   background: white;
-  padding: 20px;
+  padding: 15px 20px;
   box-shadow: var(--shadow-md);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
@@ -64,19 +64,19 @@ body {
 /* Header */
 .header-table {
   width: 100%;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
   border-collapse: collapse;
 }
 
 .header-table td {
   vertical-align: middle;
-  padding: 0 20px 0 0;
+  padding: 0 15px 0 0;
 }
 
 .header-table td:first-child {
   padding-left: 0;
   text-align: center;
-  width: 200px;
+  width: 180px;
 }
 
 .profile-img {
@@ -94,43 +94,43 @@ body {
 /* Typography */
 h1 {
   color: var(--primary-color);
-  font-size: 2rem;
+  font-size: 1.75rem;
   font-weight: 700;
-  margin: 35px 0 15px 0;
+  margin: 20px 0 10px 0;
   position: relative;
-  padding-bottom: 10px;
+  padding-bottom: 6px;
   border-bottom: 2px solid var(--primary-color);
 }
 
 /* First h1 has less top margin */
 h1:first-of-type {
-  margin-top: 15px;
+  margin-top: 10px;
 }
 
 h2 {
   color: var(--text-primary);
-  font-size: 1.25rem;
+  font-size: 1.15rem;
   font-weight: 600;
-  margin: 15px 0 8px 0;
+  margin: 10px 0 6px 0;
 }
 
 h3 {
   color: var(--text-secondary);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 500;
-  margin: 10px 0 5px 0;
+  margin: 8px 0 4px 0;
 }
 
 h4 {
   color: var(--text-secondary);
   font-size: 1rem;
   font-weight: 500;
-  margin: 8px 0;
+  margin: 6px 0;
 }
 
 p {
   color: var(--text-secondary);
-  margin: 5px 0;
+  margin: 3px 0;
   font-weight: 400;
 }
 
@@ -138,13 +138,13 @@ p {
 ul {
   list-style: none;
   padding-left: 0;
-  margin: 5px 0;
+  margin: 3px 0;
 }
 
 li {
-  margin-bottom: 3px;
+  margin-bottom: 2px;
   position: relative;
-  padding-left: 20px;
+  padding-left: 16px;
   color: var(--text-secondary);
   transition: var(--transition);
 }
@@ -154,9 +154,18 @@ li:before {
   color: var(--primary-color);
   position: absolute;
   left: 0;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
   top: 0;
   font-weight: bold;
+}
+
+/* Nested lists - more compact */
+li ul {
+  margin: 2px 0;
+}
+
+li li {
+  margin-bottom: 1px;
 }
 
 li:hover {
@@ -180,17 +189,17 @@ a:hover {
 .tech-stack {
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
-  margin: 15px 0;
+  gap: 5px;
+  margin: 10px 0;
 }
 
 .tech-item {
   background: var(--bg-light);
   color: var(--primary-color);
-  padding: 4px 8px;
-  border-radius: 12px;
+  padding: 3px 7px;
+  border-radius: 10px;
   border: 1px solid var(--border-color);
-  font-size: 0.75rem;
+  font-size: 0.73rem;
   font-weight: 500;
   text-align: center;
   transition: var(--transition);
@@ -206,31 +215,39 @@ a:hover {
 /* Job Sections */
 .job-section {
   background: white;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  padding: 2px 15px 10px 15px;
-  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  padding: 2px 12px 12px 12px;
+  margin-bottom: 12px;
   transition: var(--transition);
-  border-left: 4px solid var(--primary-color);
+}
+
+.job-section:last-child {
+  border-bottom: none;
 }
 
 .job-section:hover {
-  box-shadow: var(--shadow-md);
+  background: var(--bg-light);
 }
 
 /* Extracurricular Items */
 .extracurricular-item {
   background: white;
-  border: 1px solid var(--border-color);
-  border-radius: var(--border-radius);
-  padding: 2px 15px 10px 15px;
-  margin-bottom: 10px;
+  border: none;
+  border-bottom: 1px solid var(--border-color);
+  border-radius: 0;
+  padding: 2px 12px 12px 12px;
+  margin-bottom: 12px;
   transition: var(--transition);
-  border-left: 4px solid var(--accent-color);
+}
+
+.extracurricular-item:last-child {
+  border-bottom: none;
 }
 
 .extracurricular-item:hover {
-  box-shadow: var(--shadow-md);
+  background: var(--bg-light);
 }
 
 /* Portfolio Items */
@@ -238,8 +255,8 @@ a:hover {
   background: transparent;
   border: none;
   border-radius: 0;
-  padding: 6px 0 10px 0;
-  margin-bottom: 15px;
+  padding: 4px 0 8px 0;
+  margin-bottom: 10px;
   transition: var(--transition);
   border-bottom: 1px solid var(--border-color);
 }
@@ -250,19 +267,19 @@ a:hover {
 
 .portfolio-item h4 {
   color: var(--primary-color);
-  font-size: 1.1rem;
+  font-size: 1rem;
   font-weight: 600;
-  margin: 0 0 8px 0;
+  margin: 0 0 5px 0;
 }
 
 .portfolio-item p {
   color: var(--text-secondary);
-  margin: 0 0 8px 0;
-  line-height: 1.5;
+  margin: 0 0 5px 0;
+  line-height: 1.4;
 }
 
 .portfolio-item p:last-of-type {
-  margin-bottom: 10px;
+  margin-bottom: 8px;
 }
 
 .portfolio-item:hover h4 {
@@ -271,7 +288,7 @@ a:hover {
 
 /* Portfolio Categories */
 .portfolio-category {
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 }
 
 .portfolio-category:last-child {
@@ -280,10 +297,10 @@ a:hover {
 
 .portfolio-category h3 {
   color: var(--text-primary);
-  font-size: 1.4rem;
+  font-size: 1.25rem;
   font-weight: 600;
-  margin: 0 0 20px 0;
-  padding-bottom: 8px;
+  margin: 0 0 12px 0;
+  padding-bottom: 5px;
   border-bottom: 1px solid var(--border-color);
 }
 
@@ -313,11 +330,11 @@ a:hover {
 /* Keywords styling */
 .keywords {
   color: var(--text-muted);
-  font-size: 0.8rem;
+  font-size: 0.75rem;
   font-style: italic;
-  margin-top: 10px;
+  margin-top: 6px;
   margin-bottom: 0;
-  padding: 6px 10px;
+  padding: 4px 8px;
   background: var(--bg-light);
   border-radius: 4px;
 }
@@ -346,8 +363,8 @@ address {
   background: var(--bg-light);
   border: 1px solid var(--border-color);
   border-radius: var(--border-radius);
-  padding: 10px;
-  margin: 8px 0;
+  padding: 8px;
+  margin: 5px 0;
 }
 
 /* Loading Animation */
@@ -372,10 +389,10 @@ address {
   body {
     padding: 0;
     background: white !important;
-    font-size: 12px;
-    line-height: 1.4;
+    font-size: 11px;
+    line-height: 1.35;
   }
-  
+
   .container {
     max-width: none;
     margin: 0;
@@ -384,94 +401,94 @@ address {
     border: none;
     border-radius: 0;
   }
-  
+
   h1 {
-    font-size: 1.5rem;
-    margin: 10px 0 8px 0;
-    padding-bottom: 5px;
+    font-size: 1.4rem;
+    margin: 8px 0 6px 0;
+    padding-bottom: 4px;
     page-break-after: avoid;
   }
-  
+
   h2, h3 {
     page-break-after: avoid;
-    margin: 8px 0 5px 0;
+    margin: 6px 0 4px 0;
   }
-  
+
   section h2 {
     background: #f0f0f0;
-    padding: 8px 12px;
-    margin: 15px 0 10px 0;
+    padding: 6px 10px;
+    margin: 12px 0 8px 0;
     border-left: 3px solid #666;
-    font-size: 1.2rem;
+    font-size: 1.1rem;
     page-break-after: avoid;
   }
-  
+
   .job-section,
   .extracurricular-item {
     border: 1px solid #ccc;
-    margin-bottom: 8px;
-    padding: 1px 10px 8px 10px;
+    margin-bottom: 6px;
+    padding: 1px 8px 6px 8px;
     page-break-inside: avoid;
     box-shadow: none;
   }
-  
+
   .portfolio-item {
     border-bottom: 1px solid #ccc !important;
-    margin-bottom: 10px;
-    padding: 8px 0 8px 0;
+    margin-bottom: 8px;
+    padding: 6px 0 6px 0;
     page-break-inside: avoid;
   }
-  
+
   .portfolio-category {
-    margin-bottom: 20px;
+    margin-bottom: 15px;
     page-break-inside: avoid;
   }
-  
+
   .portfolio-category h3 {
     border-bottom: 1px solid #ccc !important;
-    margin: 0 0 15px 0;
-    padding-bottom: 5px;
+    margin: 0 0 10px 0;
+    padding-bottom: 4px;
     page-break-after: avoid;
   }
-  
+
   .tech-item {
     background: #f5f5f5 !important;
     color: #333 !important;
     border: 1px solid #ccc !important;
   }
-  
+
   .tech-item:hover {
     background: #f5f5f5 !important;
     color: #333 !important;
   }
-  
+
   .profile-img {
-    max-width: 150px;
+    max-width: 140px;
   }
-  
+
   .header-table td:first-child {
-    width: 150px;
+    width: 140px;
   }
-  
+
   .keywords {
     background: #f9f9f9 !important;
   }
-  
+
   address {
     background: #f9f9f9 !important;
   }
-  
+
   /* Hide loading messages in print */
   #career-content:empty::after,
   #extracurricular-content:empty::after {
     display: none;
   }
-  
+
   /* Ensure good page breaks */
   .tech-stack {
     page-break-inside: avoid;
   }
-  
+
   .header-table {
     page-break-inside: avoid;
   }
@@ -482,63 +499,63 @@ address {
   body {
     padding: 5px;
   }
-  
+
   .container {
-    padding: 15px;
+    padding: 12px;
     border-radius: 4px;
   }
-  
+
   .header-table td {
     display: block;
     width: 100%;
-    padding: 0 0 15px 0;
+    padding: 0 0 12px 0;
     text-align: center;
     vertical-align: top;
   }
-  
+
   h1 {
-    font-size: 1.75rem;
+    font-size: 1.5rem;
     text-align: center;
   }
-  
+
   section h2 {
-    padding: 8px 12px;
-    margin: 20px 0 12px 0;
-    font-size: 1.2rem;
+    padding: 6px 10px;
+    margin: 12px 0 8px 0;
+    font-size: 1.1rem;
   }
-  
+
   .tech-stack {
     justify-content: center;
   }
-  
+
   .job-section,
   .extracurricular-item {
-    padding: 1px 12px 8px 12px;
+    padding: 1px 10px 6px 10px;
   }
 }
 
 @media (max-width: 480px) {
   h1 {
-    font-size: 1.5rem;
+    font-size: 1.35rem;
   }
-  
+
   section h2 {
-    padding: 6px 10px;
-    margin: 15px 0 10px 0;
-    font-size: 1.1rem;
+    padding: 5px 8px;
+    margin: 10px 0 8px 0;
+    font-size: 1rem;
   }
-  
+
   .tech-item {
-    font-size: 0.8rem;
-    padding: 5px 10px;
+    font-size: 0.7rem;
+    padding: 3px 6px;
   }
-  
+
   .container {
-    padding: 10px;
+    padding: 8px;
   }
-  
+
   .job-section,
   .extracurricular-item {
-    padding: 1px 10px 6px 10px;
+    padding: 1px 8px 5px 8px;
   }
 }
