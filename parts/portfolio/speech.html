@@ -4,9 +4,8 @@
         <h4><a href="https://github.com/kdrkdrkdr/DeepFilterNet3.c.wasm">DeepFilterNet3.c.wasm</a></h4>
         <p>DeepFilterNet3 노이즈 제거 모델의 추론 엔진을 순수 C로 처음부터 재작성하여 브라우저 AudioWorklet에서 실시간 동작하도록 구현하였습니다.</p>
         <ul>
-            <li>WASM SIMD128 벡터 연산 가속, Zero heap allocation 구현</li>
-            <li>KissFFT 기반 N=960 FFT 최적화, 모든 신경망 연산 직접 구현</li>
             <li>성능: MacBook M2 ~1ms, Galaxy S23 ~4ms (10ms 프레임 내 처리)</li>
+            <li><a href="https://github.com/kdrkdrkdr/DeepFilterNet3.c.wasm/blob/main/OPTIMIZATION.md">최적화 리스트 확인하기</a></li>
             <li class="keywords">키워드: C, WebAssembly, SIMD, Noise-Reduction, Real-time Audio Processing</li>
         </ul>
     </div>
@@ -15,9 +14,8 @@
         <h4><a href="https://github.com/kdrkdrkdr/fastenhancer.c.wasm">fastenhancer.c.wasm</a></h4>
         <p>PyTorch 기반 FastEnhancer 모델을 순수 C로 완전히 재작성하여 브라우저에서 실시간 음성 향상이 가능하도록 구현하였습니다.</p>
         <ul>
-            <li>38가지 최적화 적용: SIMD 벡터화, 메모리 레이아웃, 알고리즘 단축</li>
-            <li>BatchNorm-Conv 융합, GRU 게이트 융합, Multi-head Self-Attention 100% SIMD 구현</li>
             <li>PyTorch 원본(~100MB+) 대비 약 546배 축소 (183KB), 모바일 RTF 0.28 달성</li>
+            <li><a href="https://github.com/kdrkdrkdr/fastenhancer.c.wasm/blob/main/OPTIMIZATION.md">최적화 리스트 확인하기</a></li>
             <li class="keywords">키워드: C, WebAssembly, SIMD, Audio-Enhancement, Real-time Audio Processing</li>
         </ul>
     </div>
