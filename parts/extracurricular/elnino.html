@@ -7,13 +7,15 @@
     </ul>
 
     <div style="margin: 15px 0; padding: 12px 0; border-bottom: 1px solid #e5e7eb;">
-        <strong>[Knoc] 실시간 통역 서비스</strong>
-        <p>특정 분야를 인식하여 정확하고 빠르게 번역하는 온/오프라인 수업/컨퍼런스용 통역기</p>
+        <strong>[Knoc] 실시간 번역 자막 서비스</strong>
+        <p>특정 문맥과 분야를 인식하여 정확하고 빠르게 번역하는 온/오프라인 수업/컨퍼런스용 통역기를 개발하였습니다.</p>
         <ul>
-            <li>대규모 웹소켓 처리 및 분산 컴퓨팅 아키텍처 구현</li>
-            <li>웹 클라이언트 및 관리자 페이지 개발</li>
-            <li>유연한 계약 시스템 (단기/월정액) 및 결제 시스템 구축</li>
-            <li>사용자 대시보드, 팀 관리, 모니터링 및 로그 시스템 개발</li>
+            <li>Python 기반 초기 서비스를 대규모 웹소켓 처리를 위해 Go로 전면 재작성</li>
+            <li>Redis Pub/Sub 기반 실시간 번역 방 및 스크린 송출 시스템 구축</li>
+            <li>분산 컴퓨팅 아키텍처 설계 및 구현</li>
+            <li>웹 클라이언트 개발: 유튜브형/컨퍼런스형 자막 모드, Context & Field-Based Any-to-Any Translation Model 적용</li>
+            <li>사용자 대시보드 개발: 사용시간/통역시간 관리, PAYG 및 구독제 결제·플랜·영수증 관리, 팀 멤버 관리, 사용 기록 조회</li>
+            <li>관리자 대시보드 개발: 팀 정보 관리, 견적서 입력, 서버 리소스 관리 및 로그 모니터링, 팀별 플랜 생성·결제 관리, 팀 통역시간 실시간 모니터링</li>
             <li>
                 관련 활동:
                 <ul>
@@ -28,19 +30,6 @@
                 </ul>
             </li>
             <li class="keywords">키워드: Go, Speech-to-Text, LLM, Prompt-Engineering, Redis, PostgreSQL, NginX, WebSocket, Distributed-Computing, Html/CSS/Javascript</li>
-        </ul>
-        <p><strong>Website: <a href="https://elnino.kr">https://elnino.kr</a></strong></p>
-    </div>
-
-    <div style="margin: 15px 0; padding: 12px 0;">
-        <strong>[Dramify] 오디오 드라마 생성 서비스 (개발 중)</strong>
-        <p>소설 내용을 분석하여 내레이션과 캐릭터 발화를 분리하고, 사용자가 업로드한 샘플 음성을 복제하여 캐릭터별로 지정해 오디오 드라마를 자동 생성하는 서비스</p>
-        <ul>
-            <li>소설 텍스트 분석 및 화자 분리</li>
-            <li>Zero-shot Voice Cloning 기반 캐릭터 음성 생성</li>
-            <li>내레이션/대사 자동 분류 및 TTS 적용</li>
-            <li>간투어 분리 및 생성</li>
-            <li class="keywords">키워드: Python, Text-to-Speech, Voice-Cloning, NLP, LLM</li>
         </ul>
     </div>
 </div>
