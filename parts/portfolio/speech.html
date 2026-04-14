@@ -14,8 +14,9 @@
         <ul>
             <li><a href="https://github.com/kdrkdrkdr/DeepFilterNet3.c.wasm">DeepFilterNet3.c.wasm</a> — 노이즈 제거 모델을 순수 C로 재작성. MacBook M2 ~1ms, Galaxy S23 ~4ms (<a href="https://github.com/kdrkdrkdr/DeepFilterNet3.c.wasm/blob/main/OPTIMIZATION.md">최적화 리스트</a>)</li>
             <li><a href="https://github.com/kdrkdrkdr/fastenhancer.c.wasm">fastenhancer.c.wasm</a> — 음성 향상 모델을 순수 C로 재작성. PyTorch 원본 대비 약 546배 축소 (183KB), 모바일 RTF 0.28 (<a href="https://github.com/kdrkdrkdr/fastenhancer.c.wasm/blob/main/OPTIMIZATION.md">최적화 리스트</a>)</li>
+            <li><a href="https://github.com/kdrkdrkdr/MossTTS-Nano.c">MossTTS-Nano.c</a> — 100M TTS 모델을 순수 C로 재작성. NEON/SSE SIMD, KV cache, pthread 병렬화 등 12단계 최적화로 68s→2.3s (30배), PyTorch CPU 대비 1.8배 빠른 RTF 0.33 달성</li>
             <li><a href="https://github.com/kdrkdrkdr/lilac">Project: LILAC</a> — 학습 없이 3초 음성만으로 실시간 음성 변환. GPU 없이 동작</li>
-            <li class="keywords">키워드: C, WebAssembly, SIMD, Python, Zero-shot, Voice Conversion, Noise-Reduction, Audio-Enhancement, Real-time Audio Processing</li>
+            <li class="keywords">키워드: C, WebAssembly, SIMD, NEON, SSE, KV-Cache, pthread, OpenBLAS, Python, Zero-shot, Voice Conversion, Noise-Reduction, Audio-Enhancement, Real-time Audio Processing</li>
         </ul>
     </div>
 
