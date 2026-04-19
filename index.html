@@ -35,19 +35,28 @@
         </tr>
     </table>
 
+    <h1>Publications (논문)</h1>
+    <div id="publications-content">
+        <!-- 논문 내용이 여기에 동적으로 로드됩니다 -->
+    </div>
+
     <h1>C.V. (경력기술서)</h1>
     <div id="career-content">
         <!-- 경력 내용이 여기에 동적으로 로드됩니다 -->
     </div>
-    
+
     <script>
         // 경력 파일들을 순서대로 로드
         const careerFiles = [
             'parts/career/yuhs.html',
-            'parts/career/ncsoft.html', 
+            'parts/career/ncsoft.html',
             'parts/career/axcellworks.html',
-            'parts/career/taiyaki.html',
-            'parts/career/teamks.html'
+            'parts/career/taiyaki.html'
+        ];
+
+        // 논문 파일들을 순서대로 로드
+        const publicationFiles = [
+            'parts/publications/voice_style.html'
         ];
         
         // 대외활동 파일들을 순서대로 로드
@@ -98,6 +107,24 @@
             }
         }
         
+        async function loadPublicationsContent() {
+            const publicationsContainer = document.getElementById('publications-content');
+
+            for (const file of publicationFiles) {
+                try {
+                    const response = await fetch(file);
+                    if (response.ok) {
+                        const content = await response.text();
+                        publicationsContainer.innerHTML += content;
+                    } else {
+                        console.warn(`파일을 로드할 수 없습니다: ${file}`);
+                    }
+                } catch (error) {
+                    console.error(`파일 로드 오류: ${file}`, error);
+                }
+            }
+        }
+
         async function loadPortfolioContent() {
             const portfolioContainer = document.getElementById('portfolio-content');
             
@@ -118,6 +145,7 @@
         
         // 페이지 로드되면 모든 내용 로드
         document.addEventListener('DOMContentLoaded', function() {
+            loadPublicationsContent();
             loadCareerContent();
             loadExtracurricularContent();
             loadPortfolioContent();
