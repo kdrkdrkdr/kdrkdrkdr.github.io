@@ -6,9 +6,9 @@
         <ul>
             <li><a href="https://github.com/kdrkdrkdr/DeepFilterNet3.c.wasm">DeepFilterNet3.c.wasm</a> — 노이즈 제거 모델을 순수 C로 재작성. MacBook M2 ~1ms, Galaxy S23 ~4ms (<a href="https://github.com/kdrkdrkdr/DeepFilterNet3.c.wasm/blob/main/OPTIMIZATION.md">최적화 리스트</a>)</li>
             <li><a href="https://github.com/kdrkdrkdr/fastenhancer.c.wasm">fastenhancer.c.wasm</a> — 음성 향상 모델을 순수 C로 재작성. PyTorch 원본 대비 약 546배 축소 (183KB), 모바일 RTF 0.28 (<a href="https://github.com/kdrkdrkdr/fastenhancer.c.wasm/blob/main/OPTIMIZATION.md">최적화 리스트</a>)</li>
-            <li><a href="https://github.com/kdrkdrkdr/MossTTS-Nano.c">MossTTS-Nano.c</a> — 100M TTS 모델을 순수 C로 재작성. NEON/SSE SIMD, KV cache, pthread 병렬화 등 12단계 최적화로 68s→2.3s (30배), PyTorch CPU 대비 1.8배 빠른 RTF 0.33 달성</li>
-            <li><a href="https://github.com/kdrkdrkdr/lilac">Project: LILAC</a> — 학습 없이 3초 음성만으로 실시간 음성 변환. GPU 없이 동작</li>
-            <li class="keywords">키워드: C, WebAssembly, SIMD, NEON, SSE, KV-Cache, pthread, OpenBLAS, Python, Zero-shot, Voice Conversion, Noise-Reduction, Audio-Enhancement, Real-time Audio Processing</li>
+            <li><a href="https://github.com/kdrkdrkdr/MossTTS-Nano.c">MossTTS-Nano.c</a> — 100M TTS 모델을 순수 C로 재작성. NEON/SSE SIMD, KV cache, pthread 병렬화 등 12단계 최적화로 68s→2.3s (30배), PyTorch CPU 대비 1.8배 빠른 RTF 0.33 달성 (<a href="https://github.com/kdrkdrkdr/MossTTS-Nano.c#optimizations-applied">최적화 리스트</a>)</li>
+            <li><a href="https://github.com/kdrkdrkdr/lilac">Project: LILAC</a> — 3초 음성만으로 zero-shot 실시간 음성 변환. OpenVoice v2를 PyTorch에서 순수 C로 포팅, 스트리밍 HiFi-GAN 디코더(per-layer state 유지로 hop당 신규 프레임만 생성), RNNoise SIMD(SSE4.1/AVX2) 통합, 2-thread SPSC ring 기반 오디오 파이프라인, 3-way 병렬 resblock dispatch, AGC + VAD hangover gate 구현. 16-core CPU에서 RTF 0.7~0.8, end-to-end latency ≈270~330ms (<a href="https://github.com/kdrkdrkdr/lilac/blob/main/Optimization.md">최적화 리스트</a>)</li>
+            <li class="keywords">키워드: C, WebAssembly, SIMD, NEON, SSE, AVX2, FMA, KV-Cache, pthread, OpenBLAS, RNNoise, Streaming HiFi-GAN, SPSC Ring Buffer, VAD, AGC, Python, Zero-shot, Voice Conversion, Noise-Reduction, Audio-Enhancement, Real-time Audio Processing</li>
         </ul>
     </div>
 
