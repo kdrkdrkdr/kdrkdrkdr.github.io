@@ -4,29 +4,29 @@
         <h4>모델 최적화</h4>
         <p>음성 처리 모델을 경량화·최적화하여 on-device 환경에서 실시간 동작하도록 구현하였습니다.</p>
         <ul>
+            <li><a href="https://github.com/kdrkdrkdr/nemotron-asr-streaming.c">nemotron-asr-streaming.c</a> — NVIDIA nemotron-3.5-asr-streaming-0.6b(스트리밍 ASR)를 의존성 없는 순수 C로 재작성. FastConformer 인코더 + RNN-T 디코더의 cache-aware 스트리밍 상태 유지, W8A8 양자화(per-row int8 + 32-bit row scale를 4-row 타일로 packing, "Q8P")로 약 0.62GiB, NEON/AVX2 SIMD 자동 디스패치 및 최대 16 스레드 병렬화, chunk 지연 5단계(80~1120ms, 기본 320ms) 지원 (<a href="https://github.com/kdrkdrkdr/nemotron-asr-streaming.c/blob/w8a8/MODEL.md">구현 문서</a>)</li>
             <li><a href="https://github.com/kdrkdrkdr/DeepFilterNet3.c.wasm">DeepFilterNet3.c.wasm</a> — 노이즈 제거 모델을 순수 C로 재작성. MacBook M2 ~1ms, Galaxy S23 ~4ms (<a href="https://github.com/kdrkdrkdr/DeepFilterNet3.c.wasm/blob/main/OPTIMIZATION.md">최적화 리스트</a>)</li>
-            <li><a href="https://github.com/kdrkdrkdr/fastenhancer.c.wasm">fastenhancer.c.wasm</a> — 음성 향상 모델을 순수 C로 재작성. PyTorch 원본 대비 약 546배 축소 (183KB), 모바일 RTF 0.28 (<a href="https://github.com/kdrkdrkdr/fastenhancer.c.wasm/blob/main/OPTIMIZATION.md">최적화 리스트</a>)</li>
             <li><a href="https://github.com/kdrkdrkdr/MossTTS-Nano.c">MossTTS-Nano.c</a> — 100M TTS 모델을 순수 C로 재작성. NEON/SSE SIMD, KV cache, pthread 병렬화 등 12단계 최적화로 68s→2.3s (30배), PyTorch CPU 대비 1.8배 빠른 RTF 0.33 달성 (<a href="https://github.com/kdrkdrkdr/MossTTS-Nano.c#optimizations-applied">최적화 리스트</a>)</li>
             <li><a href="https://github.com/kdrkdrkdr/lilac">Project: LILAC</a> — 3초 음성만으로 zero-shot 실시간 음성 변환. OpenVoice v2를 PyTorch에서 순수 C로 포팅, 스트리밍 HiFi-GAN 디코더(per-layer state 유지로 hop당 신규 프레임만 생성), RNNoise SIMD(SSE4.1/AVX2) 통합, 2-thread SPSC ring 기반 오디오 파이프라인, 3-way 병렬 resblock dispatch, AGC + VAD hangover gate 구현. 16-core CPU에서 RTF 0.7~0.8, end-to-end latency ≈270~330ms (<a href="https://github.com/kdrkdrkdr/lilac/blob/main/Optimization.md">최적화 리스트</a>)</li>
-            <li class="keywords">키워드: C, WebAssembly, SIMD, NEON, SSE, AVX2, FMA, KV-Cache, pthread, OpenBLAS, RNNoise, Streaming HiFi-GAN, SPSC Ring Buffer, VAD, AGC, Python, Zero-shot, Voice Conversion, Noise-Reduction, Audio-Enhancement, Real-time Audio Processing</li>
+            <li class="keywords">키워드: C, WebAssembly, SIMD, NEON, SSE, AVX2, FMA, KV-Cache, pthread, OpenBLAS, RNNoise, Streaming HiFi-GAN, SPSC Ring Buffer, VAD, AGC, ASR, RNN-T, FastConformer, Streaming-ASR, W8A8, Quantization, Python, Zero-shot, Voice Conversion, Noise-Reduction, Real-time Audio Processing</li>
         </ul>
     </div>
 
     <div class="portfolio-item">
-        <h4>다국어 음성 합성 (VITS 기반)</h4>
+        <h4>다국어 음성 합성</h4>
         <p>VITS 아키텍처를 활용하여 다국어 음성 합성 연구 및 캐릭터 TTS 서비스를 개발하였습니다.</p>
         <ul>
             <li><a href="https://github.com/kdrkdrkdr/JA2ML-VITS">JA2ML-VITS</a> — 일본어 데이터셋으로 19개국어 발화를 유도하는 다국어 TTS</li>
             <li><a href="https://github.com/kdrkdrkdr/JK-VITS">JK-VITS</a> — 한국어/일본어 이중 언어 TTS</li>
             <li><a href="https://github.com/kdrkdrkdr/RVC-VITS">RVC-VITS</a> — RVC를 이용한 음성 데이터셋 변환 및 TTS 학습</li>
-            <li><a href="https://huggingface.co/spaces/kdrkdrkdr/ProsekaTTS">ProsekaTTS</a> — 프로젝트 세카이 캐릭터 TTS. <strong>2026년 02월 기준 방문자 210만명 돌파</strong></li>
+            <li><a href="https://huggingface.co/spaces/kdrkdrkdr/ProsekaTTS">ProsekaTTS</a> — 프로젝트 세카이 캐릭터 TTS. <strong>2026년 07월 기준 방문자 230만명 돌파, 개발자 복제(Duplicate) 60회</strong></li>
             <li><a href="https://huggingface.co/spaces/kdrkdrkdr/ShirokoTTS">ShirokoTTS</a> — 블루아카이브 스나오오카미 시로코 TTS 최초 개발</li>
             <li class="keywords">키워드: Python, Text-to-Speech, Fine-Tuning, Phoneme-Conversion, Voice-Conversion, Data-Augmentation, Selenium, Distributed-Crawling</li>
         </ul>
     </div>
 
     <div class="portfolio-item">
-        <h4>다국어 발음 변환 도구 (G2P)</h4>
+        <h4>다국어 발음 변환</h4>
         <p>다국어 텍스트를 음소/발음으로 변환하는 파이썬 패키지입니다.</p>
         <ul>
             <li><a href="https://github.com/kdrkdrkdr/g2pk3">g2pk3</a> — 한국어/일본어/영어를 한국 발음으로 표기 (PyPI: <a href="https://pypi.org/project/g2pk3/">g2pk3</a>)</li>

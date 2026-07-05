@@ -1,0 +1,29 @@
+<div class="job-section">
+    <h2><a href="https://nc-ai.com">NC AI</a> (KR) 2026년 5월 ~ 현재</h2>
+    <h3>소속: AI데이터실 데이터엔지니어링팀 (팀원)</h3>
+
+    <div class="portfolio-item">
+        <h4>[콘텐츠진흥원 과제] VAETKI 모델 양자화·최적화 및 서빙</h4>
+        <p>LLM 모델 개발팀에서 개발한 VAETKI-120B-A10B 모델을 분석하고, 정확도 손실을 최소화하는 W8A16 양자화를 적용하여 추론 최적화 및 서빙까지 담당하였습니다.</p>
+        <ul>
+            <li>W8A16 양자화로 최소 손실 달성: 상대 L2 오차 0.093% · 코사인 유사도 0.99961 · SNR 40.9dB</li>
+            <li>INT8 양자화 대상: 모든 nn.Linear 가중치 (attention q/k/v/o projection, dense FFN, MoE expert, shared expert)</li>
+            <li>BF16 유지 (양자화 제외): lm_head, MoE router gate(mlp.gate), 모든 RMSNorm, token embedding — 추론 시 fp32로 연산되는 레이어이므로 양자화 대상에서 제외</li>
+            <li>양자화된 모델을 vLLM에 올려 서빙하고, 이를 위한 Demo 페이지와 FastAPI 서버 구축</li>
+            <li>프로젝트 인원: 6명 · 역할: 모델 양자화·최적화, 서빙</li>
+            <li class="keywords">키워드: Python, LLM, Quantization, W8A16, INT8, MoE, vLLM, FastAPI, Model-Serving, Inference-Optimization</li>
+        </ul>
+    </div>
+
+    <div class="portfolio-item">
+        <h4>[데이터 생성 파이프라인 가속] 연구 리드</h4>
+        <p>대량의 데이터를 생성하는 파이프라인에서 추론 처리량이 병목이 되어, speculative decoding의 draft 구조를 개선하여 무손실로 생성 속도를 향상시켰습니다.</p>
+        <ul>
+            <li>Google에서 공개한 Gemma4-31B용 assistant 모델을 drafter로 활용하여 speculative decoding 구성</li>
+            <li>drafter의 내부 draft 구조를 기존 chain 방식에서 tree 방식으로 재설계하여 한 스텝당 검증 가능한 draft 토큰 수를 늘림 — assistant(drafter)를 함께 적용한 상태를 기준으로 평균 25~30% 추가 처리량 향상 (target 모델과 출력 분포 동일 — 무손실)</li>
+            <li>vLLM · A100 x4 환경에서 생성 속도 30 tokens/s → 최대 110 tokens/s 달성</li>
+            <li>프로젝트 인원: 3명 · 역할: 추론 최적화</li>
+            <li class="keywords">키워드: Python, LLM, Speculative-Decoding, Tree-based-Drafting, Drafter, vLLM, Data-Generation, Inference-Optimization</li>
+        </ul>
+    </div>
+</div>
