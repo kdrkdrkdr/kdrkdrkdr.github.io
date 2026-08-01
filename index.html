@@ -1,180 +1,169 @@
-<!DOCTYPE HTML>
-<html lang="ko">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>김경민 이력서</title>
-    <link rel="stylesheet" type="text/css" href="./style.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Gyeongmin Kim — AI Model Optimization</title>
+<meta name="description" content="Gyeongmin Kim (kdr) — AI model optimization: LLM, TTS, ASR, voice conversion, speech enhancement. Quantization, SIMD, speculative decoding, pure-C rewrites.">
+<style>
+  :root {
+    --ink: #1a1a1a; --body: #333333; --muted: #757575;
+    --rule: #c9c9c9; --hair: #e3e3e3; --bg: #ffffff;
+  }
+  @media (prefers-color-scheme: dark) {
+    :root { --ink: #f0f0f0; --body: #cfcfcf; --muted: #8f8f8f;
+            --rule: #3f3f3f; --hair: #2c2c2c; --bg: #161616; }
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: -apple-system, "Helvetica Neue", "Apple SD Gothic Neo", "Segoe UI", sans-serif;
+    color: var(--body); background: var(--bg);
+    font-size: 15px; line-height: 1.65;
+    max-width: 780px; margin: 0 auto; padding: 48px 24px 72px;
+  }
+  a { color: var(--ink); font-weight: 600; text-decoration: none; border-bottom: 1px solid var(--rule); }
+  a:hover { border-bottom-color: var(--ink); }
+  h1 { color: var(--ink); font-size: 30px; line-height: 1.25; }
+  h1 .ko { font-weight: 400; color: var(--muted); }
+  .tagline { margin-top: 10px; }
+  .links { margin-top: 14px; font-size: 14px; }
+  .links a { margin-right: 14px; }
+  header { padding-bottom: 26px; border-bottom: 2px solid var(--ink); }
+  h2 {
+    color: var(--ink); font-size: 19px; margin: 40px 0 4px;
+    padding-bottom: 6px; border-bottom: 1px solid var(--rule);
+  }
+  h3 { color: var(--ink); font-size: 15.5px; margin: 22px 0 6px; }
+  .group-label { color: var(--muted); font-size: 12.5px; font-weight: 700;
+    text-transform: uppercase; letter-spacing: 0.04em; margin: 18px 0 6px; }
+  ul { list-style: none; }
+  li { margin: 7px 0; padding-left: 16px; position: relative; }
+  li::before { content: ""; position: absolute; left: 2px; top: 0.62em;
+    width: 5px; height: 5px; border-radius: 50%; background: var(--muted); }
+  .pub { margin: 12px 0 14px; }
+  .pub .title { color: var(--ink); font-weight: 700; }
+  .pub .meta { font-size: 13.5px; color: var(--muted); margin-top: 2px; }
+  .pub .meta b { color: var(--body); }
+  .badge { font-size: 13px; white-space: nowrap; }
+  .job { margin: 14px 0; }
+  .job .row { display: flex; justify-content: space-between; gap: 12px; flex-wrap: wrap; }
+  .job .org { color: var(--ink); font-weight: 700; }
+  .job .date { color: var(--muted); font-size: 13.5px; }
+  .job .desc { font-size: 14.5px; margin-top: 2px; }
+  .proj-dates { color: var(--muted); font-weight: 400; font-size: 13.5px; }
+  footer { margin-top: 56px; padding-top: 14px; border-top: 1px solid var(--hair);
+    color: var(--muted); font-size: 12.5px; }
+</style>
 </head>
 <body>
-<div class="container">
-    <h1>Gyeongmin Kim (김경민) 경력기술서</h1>
-    <table class="header-table">
-        <tr>
-            <td style="width: 200px;">
-                <img src="img/Gyeongmin_Kim.png" width="200" alt="Gyeongmin Kim" class="profile-img">
-            </td>
-            <td>
-                <h2>개요</h2>
-                <p>AI 기반 서비스의 설계부터 배포·운영까지 전 과정을 다루며, 자연어 처리와 음성 처리 분야에서 제품을 만들고 있습니다.</p>
-                <ul>
-                    <li>LLM 기반 실시간 번역 서비스 설계 및 운영</li>
-                    <li>자연어 처리 및 다국어 번역 모델 개발</li>
-                    <li>음성 처리 모델 개발 및 경량화</li>
-                </ul>
 
-                <h2>연락처</h2>
-                <address>
-                    <ul>
-                        <li>Phone: (+82) 10-3323-0349</li>
-                        <li>Email: <a href="mailto:kdrkdrkdr@hanyang.ac.kr">kdrkdrkdr@hanyang.ac.kr</a></li>
-                        <li>Github: <a href="https://github.com/kdrkdrkdr">https://github.com/kdrkdrkdr</a></li>
-                        <li>Huggingface: <a href="https://huggingface.co/kdrkdrkdr">https://huggingface.co/kdrkdrkdr</a></li>
-                        <li>LinkedIn: <a href="https://www.linkedin.com/in/kdrkdrkdr">https://www.linkedin.com/in/kdrkdrkdr</a></li>
-                    </ul>
-                </address>
-            </td>
-        </tr>
-    </table>
+<header>
+  <h1>Gyeongmin Kim <span class="ko">(김경민)</span></h1>
+  <p class="tagline">I optimize AI models — LLM · TTS · ASR · voice conversion · speech enhancement — tearing models apart (quantization, SIMD, speculative decoding, pure-C rewrites) and building the serving around them so they run in production.</p>
+  <p class="links">
+    <a href="https://github.com/kdrkdrkdr">GitHub</a>
+    <a href="https://huggingface.co/kdrkdrkdr">Hugging&nbsp;Face</a>
+    <a href="https://www.linkedin.com/in/kdrkdrkdr">LinkedIn</a>
+    <a href="mailto:kdrkdrkdr@hanyang.ac.kr">Email</a>
+  </p>
+</header>
 
-    <h1>Publications (논문)</h1>
-    <div id="publications-content">
-        <!-- 논문 내용이 여기에 동적으로 로드됩니다 -->
-    </div>
+<h2>Publications</h2>
 
-    <h1>C.V. (경력기술서)</h1>
-    <div id="career-content">
-        <!-- 경력 내용이 여기에 동적으로 로드됩니다 -->
-    </div>
-
-    <script>
-        // 경력 파일들을 순서대로 로드
-        const careerFiles = [
-            'parts/career/ncai.html',
-            'parts/career/yuhs.html',
-            'parts/career/ncsoft.html',
-            'parts/career/axcellworks.html',
-            'parts/career/taiyaki.html'
-        ];
-
-        // 논문 파일들을 순서대로 로드
-        const publicationFiles = [
-            'parts/publications/voice_style.html'
-        ];
-        
-        // 대외활동 파일들을 순서대로 로드
-        const extracurricularFiles = [
-            'parts/extracurricular/elnino.html'
-        ];
-        
-        // 포트폴리오 파일들을 순서대로 로드
-        const portfolioFiles = [
-            'parts/portfolio/speech.html',
-            'parts/portfolio/translation.html',
-            'parts/portfolio/contribution.html'
-        ];
-        
-        async function loadCareerContent() {
-            const careerContainer = document.getElementById('career-content');
-            
-            for (const file of careerFiles) {
-                try {
-                    const response = await fetch(file);
-                    if (response.ok) {
-                        const content = await response.text();
-                        careerContainer.innerHTML += content;
-                    } else {
-                        console.warn(`파일을 로드할 수 없습니다: ${file}`);
-                    }
-                } catch (error) {
-                    console.error(`파일 로드 오류: ${file}`, error);
-                }
-            }
-        }
-        
-        async function loadExtracurricularContent() {
-            const extracurricularContainer = document.getElementById('extracurricular-content');
-            
-            for (const file of extracurricularFiles) {
-                try {
-                    const response = await fetch(file);
-                    if (response.ok) {
-                        const content = await response.text();
-                        extracurricularContainer.innerHTML += content;
-                    } else {
-                        console.warn(`파일을 로드할 수 없습니다: ${file}`);
-                    }
-                } catch (error) {
-                    console.error(`파일 로드 오류: ${file}`, error);
-                }
-            }
-        }
-        
-        async function loadPublicationsContent() {
-            const publicationsContainer = document.getElementById('publications-content');
-
-            for (const file of publicationFiles) {
-                try {
-                    const response = await fetch(file);
-                    if (response.ok) {
-                        const content = await response.text();
-                        publicationsContainer.innerHTML += content;
-                    } else {
-                        console.warn(`파일을 로드할 수 없습니다: ${file}`);
-                    }
-                } catch (error) {
-                    console.error(`파일 로드 오류: ${file}`, error);
-                }
-            }
-        }
-
-        async function loadPortfolioContent() {
-            const portfolioContainer = document.getElementById('portfolio-content');
-            
-            for (const file of portfolioFiles) {
-                try {
-                    const response = await fetch(file);
-                    if (response.ok) {
-                        const content = await response.text();
-                        portfolioContainer.innerHTML += content;
-                    } else {
-                        console.warn(`파일을 로드할 수 없습니다: ${file}`);
-                    }
-                } catch (error) {
-                    console.error(`파일 로드 오류: ${file}`, error);
-                }
-            }
-        }
-        
-        // 페이지 로드되면 모든 내용 로드
-        document.addEventListener('DOMContentLoaded', function() {
-            loadPublicationsContent();
-            loadCareerContent();
-            loadExtracurricularContent();
-            loadPortfolioContent();
-        });
-    </script>
-
-    <h1>Extracurricular Activities (대외활동)</h1>
-    <div id="extracurricular-content">
-        <!-- 대외활동 내용이 여기에 동적으로 로드됩니다 -->
-    </div>
-
-    <h1>Personal Project (개발 포트폴리오)</h1>
-    <div id="portfolio-content">
-        <!-- 개발 포트폴리오 내용이 여기에 동적으로 로드됩니다 -->
-    </div>
-
-    <h1>License (자격증)</h1>
-    <ul>
-        <li class="license-item">프로그래밍기능사 (구 정보처리기능사) (2026.07.03)</li>
-        <li class="license-item">운전면허 2종 (2023.07.31)</li>
-        <li class="license-item">ITQ A등급 (2016.12.15)</li>
-    </ul>
-
-    <h1>Education (교육)</h1>
-    <ul>
-        <li><a href="http://cs.hanyang.ac.kr/">한양대학교 공과대학 컴퓨터소프트웨어학부</a> (재학: 2023.03 ~ 2024.06, 휴학: 2024.07 ~)</li>
-    </ul>
+<p class="group-label">Preprints</p>
+<div class="pub">
+  <div class="title">faster-enhancer.c: A Dependency-Free int8 Runtime for Streaming Speech Enhancement on Commodity CPUs</div>
+  <div class="meta"><b>Gyeongmin Kim.</b> arXiv:2607.25350, Jul 2026.
+    <span class="badge">[&#8202;<a href="https://arxiv.org/abs/2607.25350">arXiv</a>&#8202;]</span>
+    <span class="badge">[&#8202;<a href="https://github.com/kdrkdrkdr/faster-enhancer.c">code</a>&#8202;]</span></div>
 </div>
+<div class="pub">
+  <div class="title">Extracting Voice Styles from Frozen TTS Models via Gradient-Based Inverse Optimization</div>
+  <div class="meta"><b>Gyeongmin Kim.</b> arXiv:2607.25351, Jul 2026.
+    <span class="badge">[&#8202;<a href="https://arxiv.org/abs/2607.25351">arXiv</a>&#8202;]</span>
+    <span class="badge">[&#8202;<a href="https://github.com/kdrkdrkdr/supertonic.embed">code</a>&#8202;]</span></div>
+</div>
+
+<p class="group-label">Under review</p>
+<div class="pub">
+  <div class="title">Why One Small Fixed Tree Suffices: The Cost Geometry of Draft Trees for a Multi-Token-Prediction Drafter</div>
+  <div class="meta"><b>Gyeongmin Kim</b>, Ayoung Moon, Seung Jin Lee. Under review, 2026.</div>
+</div>
+
+<h2>Experience</h2>
+
+<div class="job">
+  <div class="row"><span class="org">NC AI — Data Engineering Team</span><span class="date">May 2026 – present · Seongnam, KR</span></div>
+  <div class="desc">LLM inference optimization &amp; serving — MoE quantization (W8A16), speculative decoding for a data-generation pipeline, and a distributed vLLM serving gateway in Go.</div>
+</div>
+<div class="job">
+  <div class="row"><span class="org">Yonsei University Health System — Research Engineer</span><span class="date">Mar 2025 – Oct 2025 · Seoul, KR</span></div>
+  <div class="desc">Led dev for NGS clinical report pipeline &amp; SICU false-alarm monitoring desktop app.</div>
+</div>
+<div class="job">
+  <div class="row"><span class="org">NCSOFT — Audio Data Team</span><span class="date">Jul 2024 – Jan 2025 · Seongnam, KR</span></div>
+  <div class="desc">Built end-to-end audio post-processing automation for TTS data pipelines.</div>
+</div>
+<div class="job">
+  <div class="row"><span class="org">Taiyaki Studios — AI Team</span><span class="date">Jan 2023 – Jul 2023 · USA, Remote</span></div>
+  <div class="desc">Built a complete TTS training toolkit and production inference pipeline.</div>
+</div>
+
+<h2>Personal Projects</h2>
+
+<h3>Model Optimization <span class="proj-dates">(Nov 2024 – present)</span></h3>
+<p>Speech models re-implemented in dependency-free pure C, running in real time on-device.</p>
+<ul>
+  <li><a href="https://github.com/kdrkdrkdr/nemotron-asr-streaming.c">nemotron-asr-streaming.c</a> — 0.6B streaming ASR (FastConformer + RNN-T). Cache-aware streaming, W8A8 quantization with custom "Q8P" 4-row tile packing, NEON/AVX2 SIMD, up to 16 threads.
+    <span class="badge">[&#8202;<a href="https://github.com/kdrkdrkdr/nemotron-asr-streaming.c/blob/w8a8/MODEL.md">docs</a>&#8202;]</span>
+    <span class="badge">[&#8202;<a href="https://huggingface.co/kdrkdrkdr/nemotron-3.5-asr-streaming-0.6b-w8a8">quantized&nbsp;model</a>&#8202;]</span></li>
+  <li><a href="https://github.com/kdrkdrkdr/lilac">LILAC</a> — Zero-shot real-time voice conversion from a 3s reference (OpenVoice v2 port). Streaming HiFi-GAN decoder, 2-thread SPSC audio pipeline, RNNoise SIMD. RTF 0.7–0.8 on CPU, 270–330 ms end-to-end.
+    <span class="badge">[&#8202;<a href="https://github.com/kdrkdrkdr/lilac/blob/main/Optimization.md">optimizations</a>&#8202;]</span></li>
+  <li><a href="https://github.com/kdrkdrkdr/MossTTS-Nano.c">MossTTS-Nano.c</a> — 100M TTS model. NEON/SSE SIMD, KV cache, pthread parallelism — 30× speedup (68s → 2.3s), 1.8× faster than PyTorch CPU, RTF 0.33.
+    <span class="badge">[&#8202;<a href="https://github.com/kdrkdrkdr/MossTTS-Nano.c#optimizations-applied">optimizations</a>&#8202;]</span></li>
+  <li><a href="https://github.com/kdrkdrkdr/DeepFilterNet3.c.wasm">DeepFilterNet3.c.wasm</a> — Noise-reduction model in pure C/WASM, real-time in mobile browsers. ~1 ms/frame on MacBook M2, ~4 ms on Galaxy S23.
+    <span class="badge">[&#8202;<a href="https://github.com/kdrkdrkdr/DeepFilterNet3.c.wasm/blob/main/OPTIMIZATION.md">optimizations</a>&#8202;]</span></li>
+</ul>
+
+<h3><a href="https://www.axcellworks.com">Axcellworks</a> (JP) — Real-Time Voice Conversion Intelligibility <span class="proj-dates">(Nov 2023 – Feb 2024, remote collaboration)</span></h3>
+<ul>
+  <li>Diagnosed chunk-boundary artifacts as receptive-field truncation; removed them with overlap-save chunk inference (neighbor-chunk context, keep center) at no added latency.</li>
+</ul>
+
+<h3>Multilingual TTS <span class="proj-dates">(Oct 2022 – Feb 2025)</span></h3>
+<ul>
+  <li>Data — BGM removal (Kim Vocal) → speaker diarization (pyannote) → VAD segmentation → Whisper transcription: ~30k clips (3–10 s).</li>
+  <li>Models — VITS derivatives: <a href="https://github.com/kdrkdrkdr/JA2ML-VITS">JA2ML-VITS</a> (19-language speech from Japanese-only data), <a href="https://github.com/kdrkdrkdr/JK-VITS">JK-VITS</a> (KO/JA bilingual), <a href="https://github.com/kdrkdrkdr/RVC-VITS">RVC-VITS</a> (RVC-converted training data).</li>
+  <li>Services — <a href="https://huggingface.co/spaces/kdrkdrkdr/ProsekaTTS">ProsekaTTS</a> (2.3M+ visitors, 60 developer duplicates, Jul 2026) · <a href="https://huggingface.co/spaces/kdrkdrkdr/ShirokoTTS">ShirokoTTS</a> (EN/KO/JA).</li>
+</ul>
+
+<h3>G2P Packages <span class="proj-dates">(Jun 2023 – Dec 2023)</span></h3>
+<ul>
+  <li><a href="https://github.com/kdrkdrkdr/g2pk3">g2pk3</a> — Korean/Japanese/English → Korean pronunciation. <span class="badge">[&#8202;<a href="https://pypi.org/project/g2pk3/">PyPI</a>&#8202;]</span></li>
+  <li><a href="https://github.com/kdrkdrkdr/ko2kana">ko2kana</a> — Korean/English pronunciation → Katakana. <span class="badge">[&#8202;<a href="https://pypi.org/project/ko2kana/">PyPI</a>&#8202;]</span></li>
+</ul>
+
+<h3>Japanese Translation Tools <span class="proj-dates">(Dec 2020 – Apr 2022)</span></h3>
+<ul>
+  <li><a href="https://github.com/kdrkdrkdr/novel_reader">novel-reader</a> — Android app translating novels from 7 Japanese sites with a proper-noun dictionary system.</li>
+  <li><a href="https://github.com/kdrkdrkdr/EhndWebTranslate">EhndWebTranslate</a> — Async Japanese web page translator with real-time/document/novel modes.</li>
+  <li><a href="https://github.com/kdrkdrkdr/UserDict4Papago">UserDict4Papago</a> — Proper-noun dictionary overlay for Papago KR-JP translation.</li>
+</ul>
+
+<h2>El Nino <span class="proj-dates">(Apr 2024 – Apr 2026)</span></h2>
+<p style="margin-top:8px">Founded <a href="https://elnino.kr">El Nino</a> (university startup club → sole proprietorship) and built <b>Knoc</b>, a real-time translation subtitle service for classes and conferences — launched Mar 2026, covered by <a href="https://multilingual.com/elnino-launches-knoc-ai-subtitle-solution-multilingual-communication/">Multilingual.com</a>.</p>
+<ul>
+  <li>Rewrote the Python prototype in Go for large-scale WebSocket handling; Redis Pub/Sub subtitle rooms, distributed architecture, user/admin dashboards with PAYG &amp; subscription billing.</li>
+  <li>Knoc-Overlay desktop subtitle overlay (Electron) · <a href="https://elnino.kr">elnino.kr</a> website.</li>
+  <li>Selected for MOE U300+ student startup track (2024) · served Konkuk Univ. winter school &amp; KSRT conference.</li>
+</ul>
+
+<h2>Education</h2>
+<div class="job">
+  <div class="row"><span class="org"><a href="http://cs.hanyang.ac.kr/">Hanyang University</a> — B.S. in Computer Science</span><span class="date">Mar 2023 – present (leave of absence since Jul 2024)</span></div>
+</div>
+
+<footer>© Gyeongmin Kim · kdrkdrkdr.github.io</footer>
+
 </body>
 </html>
