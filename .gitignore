@@ -1,9 +1,6 @@
 .DS_Store
 
-# private — recruiting materials, never publish
-resume-a4*.tex
-resume-a4*.pdf
-resume-check.pdf
+# private — never publish
 cv.pdf
 Gyeongmin_Kim_Resume_A4.pdf
 arpaapCV.pdf
