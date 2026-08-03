@@ -1,7 +1,7 @@
 % =============================================================
 %  Gyeongmin Kim — Resume (A4)
 %  Build:  tectonic -X compile resume-a4.tex
-%  Engine: XeLaTeX (tectonic).  Korean: xetexko + Apple SD Gothic Neo
+%  Engine: XeLaTeX (tectonic).  Fonts: xetexko + Noto Sans CJK KR
 % =============================================================
 \documentclass[a4paper]{article}
 
@@ -14,23 +14,23 @@
 % ---- fonts --------------------------------------------------
 \usepackage{fontspec}
 \usepackage{xetexko}
-% PostScript names are pinned: a family-name lookup on a macOS .ttc
-% resolves the bold face to Bold Italic.
+% Noto Sans CJK KR for Latin and Hangul alike — one family, so the two
+% scripts share weight/height, and the build is portable (no macOS-only
+% faces). Install the font locally to build (Ubuntu: fonts-noto-cjk).
 % -liga/-rlig kill the f-ligatures: with them on, "Buffer" comes out of
 % the PDF as "Buﬀer" (U+FB00) and ATS keyword matching misses it.
-% They need Renderer=OpenType — Helvetica Neue defaults to the AAT path.
-\setmainfont{HelveticaNeue}[
-  BoldFont       = HelveticaNeue-Bold,
-  ItalicFont     = HelveticaNeue-Italic,
-  BoldItalicFont = HelveticaNeue-BoldItalic,
-  Renderer       = OpenType,
-  Ligatures      = TeX,
-  RawFeature     = {-liga,-rlig,-clig,-dlig},
+% No italic face exists in the CJK family; FakeSlant covers the odd \emph.
+\setmainfont{Noto Sans CJK KR}[
+  BoldFont   = Noto Sans CJK KR Bold,
+  ItalicFont = *,
+  ItalicFeatures = {FakeSlant=0.15},
+  Ligatures  = TeX,
+  RawFeature = {-liga,-rlig,-clig,-dlig},
 ]
-\setmainhangulfont{AppleSDGothicNeo-Regular}[
-  BoldFont = AppleSDGothicNeo-Bold,
+\setmainhangulfont{Noto Sans CJK KR}[
+  BoldFont = Noto Sans CJK KR Bold,
 ]
-\newfontfamily\symfont{AppleSDGothicNeo-Regular}
+\newfontfamily\symfont{Noto Sans CJK KR}
 
 % ---- packages -----------------------------------------------
 \usepackage{xcolor}
@@ -65,7 +65,7 @@
 \emergencystretch=2em
 
 % ---- helpers ------------------------------------------------
-% Arrow glyph, taken from the Hangul font (Helvetica Neue lacks U+2192).
+% Arrow glyph, set in \symfont so it stays stable if the main font changes.
 % Write `A \ra{} B` for a spaced arrow — the literal spaces stay breakable.
 \newcommand{\ra}{{\symfont →}}
 \newcommand{\til}{\textasciitilde{}}
@@ -223,7 +223,7 @@
 \vspace{2.3mm}
 % One hero paragraph, no keyword table — the whole resume compressed to
 % identity -> data/model/serving arc with endpoints -> proof.
-{\fontsize{9.2}{12.8}\selectfont TTS · ASR · 음성 변환 · 노이즈 제거 모델을 데이터 구축부터 모델 최적화, 서빙까지 직접 다뤄 왔습니다. 지금은 같은 방식으로 LLM 추론 가속과 서빙 시스템을 설계·운영합니다.}\par
+{\fontsize{9.2}{12.8}\selectfont TTS · ASR · VC · SE · LLM 모델을 데이터 구축부터 모델 최적화·추론 가속, 서빙까지 직접 다룹니다.}\par
 \vspace{3mm}
 {\color{hairl}\hrule height 0.5pt}
 \vspace{2.2mm}
