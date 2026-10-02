@@ -185,7 +185,7 @@
 % Unaccepted work must not sit directly under the "Publications" heading —
 % every source consulted agrees (Philosophers' Cocoon: "under no
 % circumstances"; Academia SE: "creates an impression of ... exaggeration").
-% Hence the Preprints / Under review sub-labels.
+% Hence the Preprints sub-label.
 \newif\ifjustpubgroup
 \newcommand{\pubgroup}[1]{%
   \par\leftskip=0pt\relax\addvspace{2.6mm}%
@@ -228,7 +228,7 @@
 {\color{hairl}\hrule height 0.5pt}
 \vspace{2.2mm}
 {\fontsize{7.6}{9.6}\selectfont
-\lnk{mailto:kdrkdrkdr@hanyang.ac.kr}{kdrkdrkdr@hanyang.ac.kr} \,·\, \textbf{(+82) 10-3323-0349} \,·\, \lnk{https://github.com/kdrkdrkdr}{github.com/kdrkdrkdr} \,·\, \lnk{https://www.linkedin.com/in/kdrkdrkdr}{linkedin.com/in/kdrkdrkdr} \,·\, \textbf{병역: 산업기능요원 편입 희망}}\par
+\lnk{mailto:kdrkdrkdr@hanyang.ac.kr}{kdrkdrkdr@hanyang.ac.kr} \,·\, \textbf{(+82) 10-3323-0349} \,·\, \lnk{https://github.com/kdrkdrkdr}{github.com/kdrkdrkdr} \,·\, \lnk{https://www.linkedin.com/in/kdrkdrkdr}{linkedin.com/in/kdrkdrkdr} \,·\, \textbf{병역: 산업기능요원 편입 예정}}\par
 
 \par\vspace{4mm}
 {\color{ink}\hrule height 1.4pt}
@@ -245,15 +245,14 @@
 \pubentry{Extracting Voice Styles from Frozen TTS Models via Gradient-Based Inverse Optimization}
 {\textbf{Gyeongmin Kim}. arXiv:2607.25351, 2026.07. \enspace [\,\lnk{https://arxiv.org/abs/2607.25351}{arXiv}\,] [\,\lnk{https://github.com/kdrkdrkdr/supertonic.embed}{code}\,]}
 
-\pubgroup{Under review}
-
-\pubentry{Why One Small Fixed Tree Suffices: The Cost Geometry of Draft Trees for a Multi-Token-Prediction Drafter}
-{\textbf{Gyeongmin Kim}, Ayoung Moon, Seung Jin Lee. Under review, 2026.}
-
 % ------------------------------ C.V. -------------------------
 \sectiontitle{Experience}
 
-\company{\lnk{https://nc-ai.com}{NC AI} (KR)}{2026년 5월 \til{} 현재}{소속: AI데이터실 데이터엔지니어링팀 (팀원)}
+\company{\lnk{https://neosapience.com}{네오사피엔스} (KR)}{2026년 10월 \til{} 현재}{소속: AI Research Division (Speech AI Engineer)}
+
+{\leftskip=5mm\relax ASR/TTS 모델 학습용 음성 데이터를 대량으로 처리하는 파이프라인 개발과 모델 추론을 담당합니다.\par}
+
+\company{\lnk{https://nc-ai.com}{NC AI} (KR)}{2026년 5월 \til{} 8월}{소속: AI데이터실 데이터엔지니어링팀 (팀원)}
 
 \entry{[콘텐츠진흥원 과제] 문화 콘텐츠 추천 대화 시스템 설계 및 VAETKI 양자화·서빙}
 외국인·문화 소외계층에게 한국 문화 콘텐츠를 추천하는 대화 시스템의 LLM 파이프라인을 설계·구현하고, VAETKI-120B-A10B의 양자화와 서빙을 담당했습니다.\team{프로젝트 인원: \mbox{6명} · 역할: 시스템 설계·개발, 모델 양자화, 서빙}\par
@@ -267,12 +266,12 @@
 \keywords{키워드: Python, LLM, RAG, Quantization, W8A16, INT8, MoE, vLLM, FastAPI, Streaming, Model-Serving, Inference-Optimization}
 
 \entry{[데이터 생성 파이프라인] 구축 및 추론 가속}
-대량의 데이터를 생성하는 파이프라인을 구축하고, 추론 처리량 병목을 \textbf{노드당 처리량}과 \textbf{노드 간 분산} 두 축으로 해결했습니다.\team{프로젝트 인원: \mbox{3명} · 역할: 추론 최적화 · 연구 리드 — 결과 논문 투고}\par
+대량의 데이터를 생성하는 파이프라인을 구축하고, 추론 처리량 병목을 \textbf{노드당 처리량}과 \textbf{노드 간 분산} 두 축으로 해결했습니다.\team{프로젝트 인원: \mbox{3명} · 역할: 추론 최적화 · 연구 리드}\par
 \begin{itemize}
-  \item \textbf{노드당} --- Gemma4-31B용 multi-token-prediction assistant 모델을 drafter로 활용해 speculative decoding을 사내 파이프라인에 도입, vLLM · A100 x4 환경에서 \textbf{AR 대비 2\til4$\times$} 가속으로 운영 중
+  \item \textbf{노드당} --- Gemma4-31B용 multi-token-prediction assistant 모델을 drafter로 활용해 speculative decoding을 사내 파이프라인에 도입, vLLM · A100 x4 환경에서 \textbf{AR 대비 2\til4$\times$} 가속
   \item \textbf{노드 간} --- 구성원들이 각자 띄운 vLLM 서버는 중계 계층이 없어 매번 IP·포트로 수동 라우팅해야 했고, 자동 분산 게이트웨이를 제안·구현해 GPU 4장 서버 8대(총 32 GPU)를 주소 등록만으로 단일 엔드포인트에 통합
   \begin{sublist}
-    \item 게이트웨이 자체가 병목이 되지 않도록 Go로 구현 --- \textbf{동시 요청 1,000건 기준 라우팅 지연 평균 15ms}. OpenAI API 호환 인터페이스로 기존 클라이언트 코드 수정 없이 전환, 현재 사내 운영 중
+    \item 게이트웨이 자체가 병목이 되지 않도록 Go로 구현 --- \textbf{동시 요청 1,000건 기준 라우팅 지연 평균 15ms}. OpenAI API 호환 인터페이스로 기존 클라이언트 코드 수정 없이 전환해 사내 운영
   \end{sublist}
 \end{itemize}
 \keywords{키워드: Python, Go, LLM, Speculative-Decoding, vLLM, API-Gateway, Load-Balancing, Concurrency, OpenAI-Compatible-API, Data-Generation, Inference-Optimization}
